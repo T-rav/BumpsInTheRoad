@@ -1,7 +1,7 @@
 describe("Travelator", function () {
 	describe("CanMakeItHome", function(){
 		describe("Given less than 15 bumps", function(){
-			// test 1 (triangulation 1st test [return static string])
+			// test 1 (1st FakeIt test [return static string])
 			it("When single smooth section, expect 'Whoohoo!'", function() {
 				// arrange
 				let road = "_";
@@ -12,7 +12,7 @@ describe("Travelator", function () {
 				const expected = "Whoohoo!"
 				expect(actual).toBe(expected);
 			});
-			// test 3 (triangulation 3rd test [forced me to stop counting length and check for bumps with proper implementation])
+			// test 3 (3rd FakeIt test [forced me to stop counting length and check for bumps with proper implementation])
 			it("When 15 smooth section, expect 'Whoohoo!'", function() {
 				// arrange
 				let road = "_______________";
@@ -36,7 +36,7 @@ describe("Travelator", function () {
 			});
 		});
 		describe("Given 15 or more bumps", function(){
-			// test 2 (triangulation 2nd test [simple length check])
+			// test 2 (2nd FakeIt test [simple length check])
 			it("When 15 bumps expect 'Car Dead'", function() {
 				// arrange
 				let road = "nnnnnnnnnnnnnnn";
