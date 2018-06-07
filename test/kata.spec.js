@@ -1,14 +1,16 @@
 /*
- * Triangulation drives for abstraction in the same E.P.
- *  - Can delete 1 or more test cases once done they are redundant,
- * FakeIt drives for abstraction through small steps, 
- *  - Test remain valid since they built context as you understood the problem
- *  - Unlikely you will be able to delete 1 or more test
+ * Triangulation
+ *  - Only generalize code when we have two examples or more 
+ *   + Usually delete one or more test cuz we in same E.P
+ *   + If cannot delete a test we likely where finding a broundry and related E.P in the process
+ *  - Can start out feeling like FakeIt
+ * FakeIt 
+ *  - Return a constant and gradually replace constants with variables until you have real code
  */
 describe("Travelator", function () {
 	describe("CanMakeItHome", function(){
 		describe("Given less than 15 bumps", function(){
-			// test 1 (1st FakeIt test [return static string])
+			// test 1 (1st Triangulation test [return static string])
 			it("When single smooth section, expect 'Whoohoo!'", function() {
 				// arrange
 				let road = "_";
@@ -19,7 +21,7 @@ describe("Travelator", function () {
 				const expected = "Whoohoo!"
 				expect(actual).toBe(expected);
 			});
-			// test 3 (3rd FakeIt test [forced me to stop counting length and check for bumps with proper implementation])
+			// test 3 (3rd Triangulation test [forced me to stop counting length and check for bumps with proper implementation])
 			it("When 15 smooth section, expect 'Whoohoo!'", function() {
 				// arrange
 				let road = "_______________";
@@ -43,7 +45,7 @@ describe("Travelator", function () {
 			});
 		});
 		describe("Given 15 or more bumps", function(){
-			// test 2 (2nd FakeIt test [simple length check])
+			// test 2 (2nd Triangulation test [simple length check])
 			it("When 15 bumps expect 'Car Dead'", function() {
 				// arrange
 				let road = "nnnnnnnnnnnnnnn";
