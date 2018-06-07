@@ -1,3 +1,10 @@
+/*
+ * Triangulation drives for abstraction in the same E.P.
+ *  - Can delete 1 or more test cases once done they are redundant,
+ * FakeIt drives for abstraction through small steps, 
+ *  - Test remain valid since they built context as you understood the problem
+ *  - Unlikely you will be able to delete 1 or more test
+*/
 describe("Travelator", function () {
 	describe("CanMakeItHome", function(){
 		describe("Given less than 15 bumps", function(){
